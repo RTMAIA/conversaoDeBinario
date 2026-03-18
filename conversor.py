@@ -1,8 +1,5 @@
 from time import sleep
 
-binario = '100010011'
-
-
 def converter_para_decimal(binario):
     decimal = 0
     for chave, valor in enumerate(binario[::-1]):
@@ -25,19 +22,19 @@ def exibir_entrada_invertida(tempo):
 
 def exibir_potenciacao(tempo):
     for chave, _ in enumerate(binario[::-1]):
-        if chave < binario[::-1].rindex('1'):
+        if chave < len(binario[::-1]) - 1:
             print(f'2^{chave}', end=' + ', flush=True)
             sleep(tempo)
         else:
-            print(f'2^{chave}')
+            print(f'2^{chave}', flush=True)
 
 def exibir_resolver_potenciacao(tempo):
     for chave, _ in enumerate(binario[::-1]):
-        if chave < binario[::-1].rindex('1'):
+        if chave < len(binario[::-1]) - 1:
             print(f'{2**chave:03}', end=' + ', flush=True)
             sleep(tempo)
         else:
-            print(f'{2**chave}')
+            print(f'{2**chave}', flush=True)
 
 def exibir_isolar_um(tempo):
     for i in binario[::-1]:
@@ -53,7 +50,7 @@ def exibir_isolar_potenciacao(tempo):
                 print(f'2^{chave}', end=' + ', flush=True)
                 sleep(tempo)
             else:
-                print(f'2^{chave}')
+                print(f'2^{chave}', flush=True)
 
 def exibir_isolar_resolver_potenciacao(tempo):
     for chave, valor in enumerate(binario[::-1]):
@@ -62,7 +59,7 @@ def exibir_isolar_resolver_potenciacao(tempo):
                 print(f'{2**chave:03}', end=' + ', flush=True)
                 sleep(tempo)
             else:
-                print(f'{2**chave}')
+                print(f'{2**chave}', flush=True)
 
 def UI(binario, tempo):
     print('|——————| Conversor de binário para decimal |——————|')
@@ -89,5 +86,8 @@ def UI(binario, tempo):
     print('Retornado resultado da conversão para decimal...')
     converter_para_decimal(binario)
 
+binarios = ['100010011', '10010011','00010001', '00000010',
+            '10101010', '101','10010010011', '11111', '111101']
 
-UI(binario, 0.1)
+for binario in binarios:
+    UI(binario, 0.1)

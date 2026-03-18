@@ -34,7 +34,7 @@ def exibir_resolver_potenciacao(tempo):
             print(f'{2**chave:03}', end=' + ', flush=True)
             sleep(tempo)
         else:
-            print(f'{2**chave}', flush=True)
+            print(f'{2**chave:03}', flush=True)
 
 def exibir_isolar_um(tempo):
     for i in binario[::-1]:
@@ -59,7 +59,7 @@ def exibir_isolar_resolver_potenciacao(tempo):
                 print(f'{2**chave:03}', end=' + ', flush=True)
                 sleep(tempo)
             else:
-                print(f'{2**chave}', flush=True)
+                print(f'{2**chave:03}', flush=True)
 
 def UI(binario, tempo):
     print('|——————| Conversor de binário para decimal |——————|')
@@ -90,4 +90,4 @@ binarios = ['100010011', '10010011','00010001', '00000010',
             '10101010', '101','10010010011', '11111', '111101']
 
 for binario in binarios:
-    UI(binario, 0.1)
+    UI(binario, 0.0)

@@ -83,11 +83,11 @@ def UI(binario, tempo):
     print('Isolando resolução de potenciação...')
     exibir_isolar_resolver_potenciacao(binario, tempo)
     print()
-    print('Retornado resultado da conversão para decimal...')
+    print('Retornnado resultado da conversão para decimal...')
     converter_para_decimal(binario)
 
 binarios = ['100010011', '10010011','00010001', '00000010',
             '10101010', '101','10010010011', '11111', '111101']
 
 for binario in binarios:
-    UI(binario, 0.0)
+    UI(binario, 0.5)
